@@ -7,6 +7,7 @@ MAINTAINER José Carlos Bernárdez "carlos@z4studios.com"
 RUN apk add --no-cache \
 # openssh=7.2_p2-r1 \
   openssh \
+  docker \
 # git=2.8.3-r0
   git
 
