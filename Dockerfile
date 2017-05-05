@@ -8,8 +8,14 @@ RUN apk add --no-cache \
 # openssh=7.2_p2-r1 \
   openssh \
   docker \
+  python \
 # git=2.8.3-r0
   git
+
+RUN apk add --no-cache \
+      py-pip \
+    && pip install awscli \
+    && apk --purge del py-pip
 
 # Key generation on the server
 RUN ssh-keygen -A
